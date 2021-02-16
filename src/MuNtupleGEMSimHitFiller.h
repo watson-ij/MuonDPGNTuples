@@ -9,6 +9,8 @@
 #include "Geometry/Records/interface/MuonGeometryRecord.h"
 #include "Geometry/GEMGeometry/interface/GEMGeometry.h"
 
+#include "DataFormats/PatCandidates/interface/Muon.h"
+
 #include "SimDataFormats/TrackingHit/interface/PSimHitContainer.h"
 #include "SimDataFormats/Track/interface/SimTrackContainer.h"
 
@@ -35,10 +37,11 @@ class MuNtupleGEMSimHitFiller : public MuNtupleBaseFiller
   virtual void fill(const edm::Event & ev) final;
 
  private:
-
   
   edm::EDGetTokenT<edm::PSimHitContainer> m_simhit_token_;
   edm::ESGetToken<GEMGeometry, MuonGeometryRecord> geomToken_;
+  //edm::EDGetTokenT<edm::View<pat::Muon> > muons_token_;
+  edm::EDGetTokenT<edm::View<reco::GenParticle> > genParticles_token_;
 
   std::vector<float>  m_simhit_TOF;
   std::vector<float>  m_simhit_energyLoss;
@@ -62,6 +65,21 @@ class MuNtupleGEMSimHitFiller : public MuNtupleBaseFiller
   std::vector<float>  m_simhit_g_z;
   std::vector<float>  m_simhit_g_phi;
 
+  /*std::vector<int> m_musim_pdgId;
+  std::vector<int> m_musim_motherPdgId;
+  std::vector<int> m_musim_simFlavour;
+  std::vector<int> m_musim_simType;
+  std::vector<int> m_musim_simBX;*/
+
+  std::vector<int> genParticle_PdgId;
+  std::vector<float> genParticle_Pt;
+  std::vector<float> genParticle_Eta;
+  std::vector<float> genParticle_Phi;
+  std::vector<float> genParticle_vx;
+  std::vector<float> genParticle_vy;
+  std::vector<float> genParticle_vz;
+  std::vector<int> genParticle_MotherPdgId;
+  std::vector<int> genParticle_GrandMotherPdgId;
 
 };
 
