@@ -2,7 +2,6 @@
 #define MuNtuple_MuNtupleGEMMuonFiller_h
 
 #include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleBaseFiller.h"
-#include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleTrackBaseFiller.h"
 
 #include "DataFormats/MuonReco/interface/Muon.h"
 #include "DataFormats/VertexReco/interface/Vertex.h"
