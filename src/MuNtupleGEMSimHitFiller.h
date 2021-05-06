@@ -2,7 +2,6 @@
 #define MuNtuple_MuNtupleGEMSimHitFiller_h
 
 #include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleBaseFiller.h"
-#include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleTrackBaseFiller.h"
 
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 
