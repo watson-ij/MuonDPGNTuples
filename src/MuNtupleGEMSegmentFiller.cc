@@ -137,7 +137,7 @@ void MuNtupleGEMSegmentFiller::fill(const edm::Event & ev)
 	      m_seg_dirGlb_eta.push_back(dirGlb.eta());
 
 	      auto time = segment->bunchX();
-	      auto time_err = segment->timeErr();
+	      //auto time_err = segment->timeErr();
 
 	      auto chi2 = segment->chi2();
 
