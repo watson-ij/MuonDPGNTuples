@@ -15,12 +15,14 @@
 
 #include "FWCore/Utilities/interface/InputTag.h"
 #include "FWCore/Framework/interface/ESHandle.h"
+#include "FWCore/Framework/interface/ConsumesCollector.h"
 
 #include "CalibMuon/DTDigiSync/interface/DTTTrigBaseSync.h"
 #include "Geometry/CommonDetUnit/interface/GlobalTrackingGeometry.h"
 #include "Geometry/DTGeometry/interface/DTGeometry.h"
 #include "Geometry/GEMGeometry/interface/GEMGeometry.h"
 #include "Geometry/CSCGeometry/interface/CSCGeometry.h"
+#include "Geometry/Records/interface/MuonGeometryRecord.h"
 #include "TrackingTools/TransientTrack/interface/TransientTrackBuilder.h"
 #include "TrackingTools/Records/interface/TransientTrackRecord.h"
 
@@ -45,7 +47,8 @@ class MuNtupleConfig
   enum class PhaseTag { PH1 = 0, PH2 };
 
   /// Constructor
-  MuNtupleConfig(const edm::ParameterSet & config);
+  MuNtupleConfig(const edm::ParameterSet & config,
+		 edm::ConsumesCollector && collector);
 
   /// Update EventSetup information
   void getES(const edm::EventSetup & environment);
@@ -77,10 +80,8 @@ class MuNtupleConfig
   /// Handle to the Transient Track Builder
   edm::ESHandle<TransientTrackBuilder> m_transientTrackBuilder;
 
-  float residual_x_cut;
-    
-  //edm::ParameterSet & muon_service_parameter{};
-  MuonServiceProxy *muon_service;
+  //MuonServiceProxy *muon_service;
+  std::unique_ptr<MuonServiceProxy> m_muonSP;
 
 };
 

@@ -3,7 +3,6 @@ from RecoMuon.TrackingTools.MuonServiceProxy_cff import MuonServiceProxy
 
 muNtupleProducer = cms.EDAnalyzer("MuNtupleProducer",
                                   MuonServiceProxy,
-                                  residualXCut = cms.double(5.0),
                                   ph1DtDigiTag = cms.untracked.InputTag("muonDTDigis"),
                                   ph2DtDigiTag = cms.untracked.InputTag("none"),
 
@@ -11,11 +10,17 @@ muNtupleProducer = cms.EDAnalyzer("MuNtupleProducer",
                                   ph2DtSegmentTag = cms.untracked.InputTag("none"),
 
                                   ph1DTtTrigMode = cms.untracked.string('DTTTrigSyncFromDB'),
+                                  isMC = cms.bool(False),
                                   gemDigiTag = cms.untracked.InputTag("muonGEMDigis"),
+                                  #gemDigiTag = cms.untracked.InputTag("simMuonGEMDigis"),
                                   gemRecHitTag = cms.untracked.InputTag("gemRecHits"),
                                   gemSegmentTag = cms.untracked.InputTag("gemSegments"),
                                   cscSegmentTag = cms.untracked.InputTag("cscSegments"),
                                   muonTag = cms.untracked.InputTag("muons"),
+                                  
+                                  gemSimHitTag = cms.untracked.InputTag("g4SimHits","MuonGEMHits"),
+                                  muonSimTag = cms.untracked.InputTag("muons"),
+                                  genParticlesTag = cms.untracked.InputTag("genParticles"),
                                   primaryVerticesTag = cms.untracked.InputTag("offlinePrimaryVertices"),
                                   ph1DTtTrigModeConfig = cms.untracked.PSet(vPropWire = cms.double(24.4),
                                                                             doTOFCorrection = cms.bool(False),
@@ -24,6 +29,7 @@ muNtupleProducer = cms.EDAnalyzer("MuNtupleProducer",
                                                                             doWirePropCorrection = cms.bool(False),
                                                                             doT0Correction = cms.bool(True),
                                                                             tTrigLabel = cms.string(''),
+                                                                            t0Label = cms.string(''),
                                                                             debug = cms.untracked.bool(False)
                                                                         )
 )

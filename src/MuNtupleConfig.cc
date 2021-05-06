@@ -14,7 +14,6 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Framework/interface/EventSetup.h"
 #include "FWCore/Framework/interface/Run.h"
-#include "FWCore/Framework/interface/ConsumesCollector.h"
 
 #include "Geometry/Records/interface/GlobalTrackingGeometryRecord.h"
 #include "Geometry/Records/interface/MuonGeometryRecord.h"
@@ -27,7 +26,8 @@
 #include "TString.h"
 #include "TRegexp.h"
 
-MuNtupleConfig::MuNtupleConfig(const edm::ParameterSet & config) 
+MuNtupleConfig::MuNtupleConfig(const edm::ParameterSet & config,
+			       edm::ConsumesCollector && collector) 
 { 
   
   edm::InputTag none = edm::InputTag("none");
@@ -48,8 +48,7 @@ MuNtupleConfig::MuNtupleConfig(const edm::ParameterSet & config)
 
   m_inputTags["gemDigiTag"] = config.getUntrackedParameter<edm::InputTag>("gemDigiTag", none);
   
-  m_inputTags["gemRecHitTag"] = config.getUntrackedParameter<edm::InputTag>("gemRecHitTag", 
-none);
+  m_inputTags["gemRecHitTag"] = config.getUntrackedParameter<edm::InputTag>("gemRecHitTag", none);
 
   m_inputTags["gemSegmentTag"] = config.getUntrackedParameter<edm::InputTag>("gemSegmentTag",none);
 
@@ -59,14 +58,24 @@ none);
 
   m_inputTags["primaryVerticesTag"] = config.getUntrackedParameter<edm::InputTag>("primaryVerticesTag",none);
 
-  m_inputTags["gemRecHitTag"] = config.getUntrackedParameter<edm::InputTag>("gemRecHitTag",none);
+  m_inputTags["gemSimHitTag"] = config.getUntrackedParameter<edm::InputTag>("gemSimHitTag",none);
+  
+  m_inputTags["muonSimTag"] = config.getUntrackedParameter<edm::InputTag>("muonSimTag",none);
+  
+  m_inputTags["genParticlesTag"] = config.getUntrackedParameter<edm::InputTag>("genParticlesTag",none);
 
-  residual_x_cut = static_cast<float>(config.getParameter<double>("residualXCut"));
+  m_muonSP = std::make_unique<MuonServiceProxy>(config.getParameter<edm::ParameterSet>("ServiceParameters"), std::move(collector));
+
 }
 
 void MuNtupleConfig::getES(const edm::EventSetup & environment) 
-{ 
+{
+  m_muonSP->update(environment);
+}
 
+void MuNtupleConfig::getES(const edm::Run &run, const edm::EventSetup & environment) 
+{
+ 
   if (m_inputTags["ph1DtSegmentTag"].label() != "none")
     m_dtSyncs[PhaseTag::PH1]->setES(environment);
 
@@ -74,17 +83,12 @@ void MuNtupleConfig::getES(const edm::EventSetup & environment)
     m_dtSyncs[PhaseTag::PH2]->setES(environment);
 
   environment.get<MuonGeometryRecord>().get(m_dtGeometry);
-  environment.get<GlobalTrackingGeometryRecord>().get(m_trackingGeometry);
   environment.get<MuonGeometryRecord>().get(m_gemGeometry);
-  environment.get<TransientTrackRecord>().get("TransientTrackBuilder", m_transientTrackBuilder);
   environment.get<MuonGeometryRecord>().get(m_cscGeometry);
-     
- }
 
-void MuNtupleConfig::getES(const edm::Run &run, const edm::EventSetup & environment) 
-{
- 
-  getES(environment);
+  environment.get<GlobalTrackingGeometryRecord>().get(m_trackingGeometry);
+  environment.get<TransientTrackRecord>().get("TransientTrackBuilder", m_transientTrackBuilder);
+  
 
 }
 

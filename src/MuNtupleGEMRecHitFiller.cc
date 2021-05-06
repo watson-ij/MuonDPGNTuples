@@ -6,20 +6,18 @@
 
 
 MuNtupleGEMRecHitFiller::MuNtupleGEMRecHitFiller(edm::ConsumesCollector && collector,
-					     const std::shared_ptr<MuNtupleConfig> config,
-					     std::shared_ptr<TTree> tree, const std::string & label) :
-
-  MuNtupleBaseFiller(config, tree, label)
+						 const std::shared_ptr<MuNtupleConfig> config,
+						 std::shared_ptr<TTree> tree, const std::string & label) : MuNtupleBaseFiller(config, tree, label)
 {
-
+  
   edm::InputTag &iTag = m_config->m_inputTags["gemRecHitTag"];
   if (iTag.label() != "none") m_rechit_token_ = collector.consumes<GEMRecHitCollection>(iTag);
-
+  
 }
 
 MuNtupleGEMRecHitFiller::~MuNtupleGEMRecHitFiller()
 {
-
+  
 };
 
 void MuNtupleGEMRecHitFiller::initialize()
@@ -27,7 +25,8 @@ void MuNtupleGEMRecHitFiller::initialize()
   
   m_tree->Branch((m_label + "_nRecHits").c_str(), &m_nRecHits, (m_label + "_nRecHits/i").c_str());
 
-  m_tree->Branch((m_label + "_cluster_size").c_str(), &m_rechit_cluster_size);
+  m_tree->Branch((m_label + "_cluster_size").c_str(), &m_rechit_cluster_size); 
+  m_tree->Branch((m_label + "_firstClusterStrip").c_str(), &m_rechit_firstClusterStrip);
   m_tree->Branch((m_label + "_bx").c_str(), &m_rechit_bx);
 
   m_tree->Branch((m_label + "_region").c_str(), &m_rechit_region);
@@ -40,6 +39,9 @@ void MuNtupleGEMRecHitFiller::initialize()
   m_tree->Branch((m_label + "_loc_x").c_str(), &m_rechit_loc_x);
   m_tree->Branch((m_label + "_loc_y").c_str(), &m_rechit_loc_y);
   m_tree->Branch((m_label + "_loc_z").c_str(), &m_rechit_loc_z);
+
+  m_tree->Branch((m_label + "_loc_errX").c_str(), &m_rechit_loc_errX);
+  m_tree->Branch((m_label + "_loc_errY").c_str(), &m_rechit_loc_errY);
 
   m_tree->Branch((m_label + "_g_r").c_str(), &m_rechit_g_r);
   m_tree->Branch((m_label + "_g_phi").c_str(), &m_rechit_g_phi);
@@ -56,6 +58,7 @@ void MuNtupleGEMRecHitFiller::clear()
 
   m_rechit_cluster_size.clear();
   m_rechit_bx.clear();
+  m_rechit_firstClusterStrip.clear();
 
   m_rechit_region.clear();
   m_rechit_chamber.clear();
@@ -68,6 +71,9 @@ void MuNtupleGEMRecHitFiller::clear()
   m_rechit_loc_y.clear();
   m_rechit_loc_z.clear();
  
+  m_rechit_loc_errX.clear();
+  m_rechit_loc_errY.clear();
+
   m_rechit_g_r.clear();
   m_rechit_g_phi.clear();
   m_rechit_g_x.clear();
@@ -104,15 +110,15 @@ void MuNtupleGEMRecHitFiller::fill(const edm::Event & ev)
 	    m_rechit_chamber.push_back(chamber);
 	    m_rechit_layer.push_back(layer);
 
-	    const BoundPlane& surface = gem->idToDet(gem_id)->surface();
-	    GlobalPoint&& rechit_global_pos = surface.toGlobal(rechit->localPosition());
-	    //LocalPoint&& rechit_local_pos = surface.toLocal(rechit->globalPosition());
+	    const BoundPlane& EtaPartSurface = gem->idToDet(gem_id)->surface();
+	    GlobalPoint&& rechit_global_pos = EtaPartSurface.toGlobal(rechit->localPosition());
+	    LocalPoint&& rechit_local_pos = gem->idToDet(gem_id.chamberId())->toLocal(rechit_global_pos);
 	    
-	    m_rechit_loc_r.push_back(rechit->localPosition().perp());
-            m_rechit_loc_phi.push_back(rechit->localPosition().phi());
-            m_rechit_loc_x.push_back(rechit->localPosition().x());
-            m_rechit_loc_y.push_back(rechit->localPosition().y());
-            m_rechit_loc_z.push_back(rechit->localPosition().z());
+	    m_rechit_loc_r.push_back(rechit_local_pos.perp());
+	    m_rechit_loc_phi.push_back(rechit_local_pos.phi());
+	    m_rechit_loc_x.push_back(rechit_local_pos.x());
+	    m_rechit_loc_y.push_back(rechit_local_pos.y());
+	    m_rechit_loc_z.push_back(rechit_local_pos.z());
 
 	    m_rechit_g_r.push_back(rechit_global_pos.perp());
 	    m_rechit_g_phi.push_back(rechit_global_pos.phi());
@@ -120,15 +126,13 @@ void MuNtupleGEMRecHitFiller::fill(const edm::Event & ev)
 	    m_rechit_g_y.push_back(rechit_global_pos.y());
 	    m_rechit_g_z.push_back(rechit_global_pos.z());
 
-	    //std::cout << "rec_x" << rechit->localPosition().x() << std::endl;
-	    //std::cout << "rec_y" << rechit->localPosition().y() << std::endl;
-	    
 	    auto cluster_size = rechit->clusterSize();
+	    auto firstClusterStrip = rechit->firstClusterStrip();
 	    int bx = rechit->BunchX();
 	    
 	    m_rechit_cluster_size.push_back(cluster_size);
 	    m_rechit_bx.push_back(bx);
-	    //std::cout << " cluster size: " << cluster_size << std::endl;
+	    m_rechit_firstClusterStrip.push_back(firstClusterStrip);
 
 	    m_nRecHits++;
 	  }

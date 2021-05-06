@@ -41,6 +41,7 @@ class MuNtupleGEMRecHitFiller : public MuNtupleBaseFiller
   unsigned int m_nRecHits;
   
   std::vector<int> m_rechit_cluster_size;
+  std::vector<int> m_rechit_firstClusterStrip;
   std::vector<int> m_rechit_bx;
 
   std::vector<int> m_rechit_region;
@@ -53,7 +54,10 @@ class MuNtupleGEMRecHitFiller : public MuNtupleBaseFiller
   std::vector<float>  m_rechit_loc_x;
   std::vector<float>  m_rechit_loc_y;
   std::vector<float>  m_rechit_loc_z;
-  
+
+  std::vector<float>  m_rechit_loc_errX;
+  std::vector<float>  m_rechit_loc_errY;
+
   std::vector<float>  m_rechit_g_r;
   std::vector<float>  m_rechit_g_phi;
   std::vector<float>  m_rechit_g_x;
