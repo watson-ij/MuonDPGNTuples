@@ -201,6 +201,7 @@ void MuNtupleGEMSimHitFiller::fill(const edm::Event & ev)
 	  else
 	    {
 	      genParticle_MotherPdgId.push_back(-99);
+		genParticle_GrandMotherPdgId.push_back(-99);
 	    }
     }
 };
