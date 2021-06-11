@@ -1,0 +1,48 @@
+DEBUG 2021-05-28 09:19:17.743 UTC: 	 CRAB Client version: v3.210323
+DEBUG 2021-05-28 09:19:17.744 UTC: 	 Running on: Linux lxplus734.cern.ch 3.10.0-1160.24.1.el7.x86_64 #1 SMP Thu Apr 8 19:51:47 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-05-28 09:19:17.744 UTC: 	 Executing command: 'submit'
+DEBUG 2021-05-28 09:19:17.745 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-05-28 09:19:17.764 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2021-05-28 09:19:17.764 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-05-28 09:19:17.777 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-05-28 09:19:17.778 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+ERROR 2021-05-28 09:19:17.778 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 165, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 150, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/ClientUtilities.py", line 402, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+INFO 2021-05-28 09:19:17.783 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-06-11 07:49:23.066 UTC: 	 CRAB Client version: v3.210601
+DEBUG 2021-06-11 07:49:23.066 UTC: 	 Running on: Linux lxplus749.cern.ch 3.10.0-1160.25.1.el7.x86_64 #1 SMP Wed Apr 28 21:49:45 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-06-11 07:49:23.066 UTC: 	 Executing command: 'submit'
+DEBUG 2021-06-11 07:49:23.066 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-06-11 07:49:23.068 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-06-11 07:49:23.068 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-06-11 07:49:23.090 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-06-11 07:49:23.090 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+ERROR 2021-06-11 07:49:23.091 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+INFO 2021-06-11 07:49:23.115 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log

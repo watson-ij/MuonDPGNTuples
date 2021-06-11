@@ -4,31 +4,44 @@ Repository to host common ntuples developed and maintained by the CMS muon DPGs.
 
 ## Installation:
 ### Download 
+You may want to use a specific CMSSW  version (from now on referred as CMSSW_XXXX) and global tag based on the data you are about to Ntuplize:
+- For **P5 data** check  [Global Tags for Conditions Data ](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions)
+- For **MC data** check the production parameters
 
 ```
-cmsrel CMSSW_11_2_3  (cmsrel CMSSW_11_2_0_pre8_Patatrack for MC)
-cd CMSSW_11_2_3/src/  (cmsrel CMSSW_11_2_0_pre8_Patatrack/src/ for MC)
+cmsrel CMSSW_XXXX 
+cd CMSSW_XXXX/src/ 
 cmsenv
 
-git clone git@github.com:gmilella12/MuonDPGNTuples.git
-
+git clone git@github.com:gmilella12/MuonDPGNTuples.git MuDPGAnalysis/MuonDPGNtuples
+```
 
 ### Compile
+```
 scram b -j 5
-
-## Run the NTuplizer
+```
+## How to run the Ntuplzier
+### Run the NTuplizer interactively
 - MC and MWGR Data use different **globalTag** and **CMSSW Release**. Edit config file accordingly!
-
+```
 cd MuDPGAnalysis/MuonDPGNtuples/test/
 cmsRun muDpgNtuples_cfg.py isMC=False  nEvents=-1 inputFolder=/eos/cms//store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/341/112/00000/
+```
 
 the current commit, provided with these options, will analyze:
 - The files in the folder `inputFolder`
-- It will assume it is a MC datasample, so will fill the SimHit branches
+- It will assume it is NOT a MC datasample, so will NOT fill the SimHit branches
 - Will analyze all the events in the file (nEvents = -1)
 
 
 Change the settings above based on your intended use
+### Run the NTuplizer with CRAB
+- You have to authenticate yourself by mean of the grid certificate ( check the  [Twiki](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid#Using_your_grid_certificate) )
+- Edit the file `./CRAB_SUB/crabConfig.py`  specifying the Job input paramters (i.e. nEvents, isMC), the input dataset, where to store the output files 
+- Execute `crab submit -c  ./CRAB_SUB/crabConfig.py`
+
+- Enjoy the rest of the day
+
 
 ## Overview of the ntuple structure:
 
@@ -108,6 +121,8 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         gemRecHit_loc_x (TBranchElement)
                         gemRecHit_loc_y (TBranchElement)
                         gemRecHit_loc_z (TBranchElement)
+                        gemRecHit_loc_errX (TBranchElement)
+                        gemRecHit_loc_errY (TBranchElement)
                         gemRecHit_g_r (TBranchElement)
                         gemRecHit_g_phi (TBranchElement)
                         gemRecHit_g_x (TBranchElement)
@@ -148,6 +163,10 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         mu_isMedium (TBranchElement)
                         mu_isTight (TBranchElement)
                         mu_propagated_isME11 (TBranchElement)
+                        mu_propagated_TrackNormChi2 (TBranchElement)
+                        mu_propagated_numberOfValidPixelHits (TBranchElement)
+                        mu_propagated_innerTracker_ValidFraction (TBranchElement)
+                        mu_propagated_numberOfValidTrackerHits (TBranchElement)
                         mu_path_length/F (TBranch)
                         mu_isinsideout (TBranchElement)
                         mu_isincoming (TBranchElement)
@@ -159,17 +178,17 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         mu_propagated_phi (TBranchElement)
                         mu_propagated_eta (TBranchElement)
                         mu_propagated_charge (TBranchElement)
-                        mu_propagated_TrackNormChi2 (TBranchElement)
-                        mu_propagated_numberOfValidPixelHits (TBranchElement)
-                        mu_propagated_innerTracker_ValidFraction (TBranchElement)
-                        mu_propagated_numberOfValidTrackerHits (TBranchElement)
                         mu_propagatedLoc_x (TBranchElement)
                         mu_propagatedLoc_y (TBranchElement)
                         mu_propagatedLoc_z (TBranchElement)
                         mu_propagatedLoc_r (TBranchElement)
+                        mu_propagated_isGEM (TBranchElement)
                         mu_propagatedLoc_phi (TBranchElement)
                         mu_propagatedLoc_errX (TBranchElement)
                         mu_propagatedLoc_errY (TBranchElement)
+                        mu_propagatedLoc_dirX (TBranchElement)
+                        mu_propagatedLoc_dirY (TBranchElement)
+                        mu_propagatedLoc_dirZ (TBranchElement)
                         mu_propagatedGlb_x (TBranchElement)
                         mu_propagatedGlb_y (TBranchElement)
                         mu_propagatedGlb_z (TBranchElement)
@@ -179,7 +198,6 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         mu_propagatedGlb_errY (TBranchElement)
                         mu_propagatedGlb_errR (TBranchElement)
                         mu_propagatedGlb_errPhi (TBranchElement)
-                        mu_propagatedLoc_dirX (TBranchElement)
                         mu_propagated_EtaPartition_centerX (TBranchElement)
                         mu_propagated_EtaPartition_centerY (TBranchElement)
                         mu_propagated_EtaPartition_rMax (TBranchElement)
@@ -193,5 +211,4 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         mu_propagated_Outermost_y (TBranchElement)
                         mu_propagated_Outermost_z (TBranchElement)
 ```
-
 

@@ -9,8 +9,8 @@ import sys
 options = VarParsing.VarParsing()
 
 options.register('globalTag',
-                 '112X_mcRun3_2021_realistic_v10',
-                 #'112X_dataRun3_Express_v5',
+                 #'112X_mcRun3_2021_realistic_v10',
+                 '113X_dataRun3_Express_v2',
                  #'112X_dataRun3_Prompt_v2',
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
@@ -30,6 +30,7 @@ options.register('isMC',
                  "Maximum number of processed events")
 
 options.register('inputFolder',
+                 "/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/342/094/00001",
                  #'/lustre/cms/store/user/gmilella/MCCosmics_0T_10M/CRAB3_MC_Cosmics_RECOCOSMICS_0T_10M/210309_112327/0000',
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
@@ -42,7 +43,7 @@ options.register('secondaryInputFolder',
                  "EOS folder with input files for secondary files")
 
 options.register('ntupleName',
-                 'MuDPGNtuple_MCCosmics_prova.root',
+                 'MuDPGNtuple_2021_MWGR4.root',
                  #'MuDPGNtuple_MCZmumu.root',
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
