@@ -1,15 +1,10 @@
 #include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleGEMMuonFiller.h"
-
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/LuminosityBlock.h"
-
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 #include "FWCore/Framework/interface/ESHandle.h"
-
 #include "DataFormats/Common/interface/Ref.h"
-
 #include "Geometry/GEMGeometry/interface/GEMGeometry.h"
-
 #include "DataFormats/DetId/interface/DetId.h"
 #include "DataFormats/MuonDetId/interface/MuonSubdetId.h"
 #include "DataFormats/MuonDetId/interface/DTChamberId.h"
@@ -151,6 +146,12 @@ void MuNtupleGEMMuonFiller::initialize()
   m_tree->Branch((m_label + "_propagated_EtaPartition_phiMax").c_str(), &m_propagated_EtaPartition_phiMax);
   m_tree->Branch((m_label + "_propagated_EtaPartition_phiMin").c_str(), &m_propagated_EtaPartition_phiMin);
 
+  m_tree->Branch((m_label + "_propagated_nME1hits").c_str(), &m_propagated_nME1hits);
+  m_tree->Branch((m_label + "_propagated_nME2hits").c_str(), &m_propagated_nME2hits);
+  m_tree->Branch((m_label + "_propagated_nME3hits").c_str(), &m_propagated_nME3hits);
+  m_tree->Branch((m_label + "_propagated_nME4hits").c_str(), &m_propagated_nME4hits);
+
+
   m_tree->Branch((m_label + "_propagated_Innermost_x").c_str(), &m_propagated_Innermost_x);
   m_tree->Branch((m_label + "_propagated_Innermost_y").c_str(), &m_propagated_Innermost_y);
   m_tree->Branch((m_label + "_propagated_Innermost_z").c_str(), &m_propagated_Innermost_z);
@@ -225,6 +226,11 @@ void MuNtupleGEMMuonFiller::clear()
   m_propagatedGlb_z.clear();
   m_propagatedGlb_r.clear();
   m_propagatedGlb_phi.clear();
+
+  m_propagated_nME1hits.clear();
+  m_propagated_nME2hits.clear();
+  m_propagated_nME3hits.clear();
+  m_propagated_nME4hits.clear();
 
   m_propagated_Innermost_x.clear();
   m_propagated_Innermost_y.clear();
@@ -375,26 +381,72 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
 
 	      //auto recHitMu = trackRef->recHitsBegin(); //GLB muon
 	      //auto recHitMuEnd = trackRef->recHitsEnd();
-	      
+          
+          const reco::HitPattern& htp = transient_track.hitPattern();
+
 	      for(; recHitMu != recHitMuEnd; ++recHitMu)
-		{
-		  DetId detId = (*recHitMu)->geographicalId();
-		    
-		  if(detId.det() == DetId::Muon && detId.subdetId() == MuonSubdetId::CSC)
-		    {
-		      isCSC = true;
-		      
-		      const CSCDetId csc_id{detId};
-		      
-		      if(csc_id.station() == 1 && ((csc_id.ring() == 1) || (csc_id.ring() == 4)) ) isME11 = true;
-		    }
-		} //loop on recHits
+              {
+                  DetId detId = (*recHitMu)->geographicalId();
+                  
+                  if(detId.det() == DetId::Muon && detId.subdetId() == MuonSubdetId::CSC)
+                      {
+                          isCSC = true;
+                          const CSCDetId csc_id{detId};
+                          // ME11 chambers are composed by 2 subchambers: ME11a, ME11b. In CMSSW they are referred as Stat. 1 Ring 1, Stat. 1 Ring. 4 respectively
+                          if(csc_id.station() == 1 && ((csc_id.ring() == 1) || (csc_id.ring() == 4)) ) 
+                              {
+                                  isME11 = true;
+                              }
+                      }
+              } //loop on recHits to find if is ME11
+          
+                            
 	      m_isCSC.push_back(isCSC);
 	      m_isME11.push_back(isME11);
-	           
-              //if at least one CSC hit is found, perform propagation 
+	      
+          //if at least one CSC hit is found, perform propagation 
 	      if(isCSC)
               { 
+                  //std::cout<<"Track HITS"<<std::endl;
+                  //htp.print(reco::HitPattern::TRACK_HITS);
+
+                  // CSC Hits
+                  int nME1_hits = 0;
+                  int nME2_hits = 0;
+                  int nME3_hits = 0;
+                  int nME4_hits = 0;
+
+                  for (int i = 0; i < htp.numberOfAllHits(htp.TRACK_HITS); i++) {
+                      uint32_t hit = htp.getHitPattern(htp.TRACK_HITS, i);
+                      int substructure = htp.getSubStructure(hit);
+                      int hittype = htp.getHitType(hit);
+
+                      
+                      if ( substructure == 2 && hittype == 0) // CSC Hits
+                          {
+                              int CSC_station = htp.getMuonStation(hit);
+                              
+                              switch(CSC_station) {
+                              case 1 :
+                                  nME1_hits++;
+                                  break;
+                              case 2 :
+                                  nME2_hits++;
+                                  break;
+                              case 3 :
+                                  nME3_hits++;
+                                  break;
+                              case 4 :
+                                  nME4_hits++;
+                                  break;
+                              default: 
+                                  std::cout<<"Invalid station " <<std::endl;
+                              }
+                              
+                          }
+                  }
+                      
+
                   for (const GEMRegion* gem_region : gem->regions())
                       {
                           bool is_opposite_region = muon.eta() * gem_region->region() < 0;
@@ -447,9 +499,7 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
                                                           const GlobalPoint&& dest_global_pos = dest_state.globalPosition();
                                                           const LocalPoint&& local_point = eta_partition->toLocal(dest_global_pos);
                                                           const LocalPoint local_point_2d(local_point.x(), local_point.y(), 0.0f);
-                                                          
-                                                          
-                                                          // Only x,y are actually "propagated". Z is fixed on the propagation plane
+
                                                           if (eta_partition->surface().bounds().inside(local_point_2d)) 
                                                               {
 
@@ -470,6 +520,11 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
                                                                   const double dest_global_phi_err = std::sqrt(dest_global_err.phierr(dest_global_pos));
                                                                   
                                                                   m_propagated_isME11.push_back(isME11);
+
+                                                                  m_propagated_nME1hits.push_back(nME1_hits);
+                                                                  m_propagated_nME2hits.push_back(nME2_hits);
+                                                                  m_propagated_nME3hits.push_back(nME3_hits);
+                                                                  m_propagated_nME4hits.push_back(nME4_hits);
                                                                   
                                                                   m_propagated_Innermost_x.push_back(transient_track.innermostMeasurementState().globalPosition().x());
                                                                   m_propagated_Innermost_y.push_back(transient_track.innermostMeasurementState().globalPosition().y());
@@ -557,3 +612,4 @@ const GEMEtaPartition* MuNtupleGEMMuonFiller::findEtaPartition(const GEMChamber*
 
   return nullptr;
 }
+

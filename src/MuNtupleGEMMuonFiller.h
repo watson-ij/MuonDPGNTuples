@@ -137,6 +137,11 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
   std::vector<float> m_propagated_EtaPartition_rMax;
   std::vector<float> m_propagated_EtaPartition_rMin;
 
+  std::vector<int> m_propagated_nME1hits;
+  std::vector<int> m_propagated_nME2hits;
+  std::vector<int> m_propagated_nME3hits;
+  std::vector<int> m_propagated_nME4hits;
+
   std::vector<float> m_propagated_Innermost_x;
   std::vector<float> m_propagated_Innermost_y;
   std::vector<float> m_propagated_Innermost_z;
