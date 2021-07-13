@@ -23,7 +23,7 @@ config.Data.unitsPerJob = 180
 config.Data.publication = False
 config.Data.outLFNDirBase = '/store/user/fivone/GEMMuonNtuplizerZmumu'
 config.Data.outputDatasetTag = 'MWGR4'
-config.Data.runRange = '342094'
+config.Data.runRange = '342218'
 
 config.section_("Site")
 config.Site.storageSite = 'T2_DE_RWTH'
