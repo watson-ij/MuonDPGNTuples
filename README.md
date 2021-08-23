@@ -13,7 +13,7 @@ cmsrel CMSSW_XXXX
 cd CMSSW_XXXX/src/ 
 cmsenv
 
-git clone git@github.com:gmilella12/MuonDPGNTuples.git MuDPGAnalysis/MuonDPGNtuples
+git clone https://github.com/gem-dpg-pfa/MuonDPGNTuples.git MuDPGAnalysis/MuonDPGNtuples
 ```
 
 ### Compile
