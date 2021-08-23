@@ -1,0 +1,14 @@
+<use name="FWCore/Framework"/>
+<use name="FWCore/PluginManager"/>
+<use name="FWCore/ParameterSet"/>
+<use name="Geometry/Records"/>
+
+<library name="MuDPGAnalysisMuonDPGNtuplesPlugin" file="*.cc">
+   <use name="MuDPGAnalysis/MuonDPGNtuples"/>
+   <use name="root"/>
+   <use name="rootminuit"/>
+   <use name="clhep"/>
+   <use name="rootrflx"/>
+   <use name="rootmath"/>
+   <Flags EDM_PLUGIN="1"/>
+</library>
