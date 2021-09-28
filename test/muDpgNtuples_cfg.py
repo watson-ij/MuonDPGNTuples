@@ -33,8 +33,8 @@ options.register('isMC',
                  "Maximum number of processed events")
 
 options.register('inputFolder',
-                 '/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/343/496/00000/',
-                 #"/eos/cms/store/data/Commissioning2021/Cosmics/RAW/v1/000/342/810/00000/",
+                 #'/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/068/00000/',
+                 "/eos/cms/store/data/Commissioning2021/Cosmics/RAW/v1/000/342/810/00000/",
                  #'/lustre/cms/store/user/gmilella/MCCosmics_0T_10M/CRAB3_MC_Cosmics_RECOCOSMICS_0T_10M/210309_112327/0000',
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
@@ -47,11 +47,10 @@ options.register('secondaryInputFolder',
                  "EOS folder with input files for secondary files")
 
 options.register('ntupleName',
-                 'MuDPGNtuple_2021_CRUZET_343810.root',
-                 #'MuDPGNtuple_MCZmumu.root',
+                 'MuDPGNtuple.root', #default value
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
-                 "Folder and name ame for output ntuple")
+                 "Name for output ntuple")
 
 options.parseArguments()
 
@@ -67,10 +66,8 @@ process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(options.nEven
 #process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condDBv2_cff')
 
 process.GlobalTag.globaltag = cms.string(options.globalTag)
-#process.GlobalTag = GlobalTag(process.GlobalTag,'111X_dataRun3_Express_v4', '')
 
 process.source = cms.Source("PoolSource",
-                            
         fileNames = cms.untracked.vstring(),
         secondaryFileNames = cms.untracked.vstring()
 )
@@ -78,6 +75,7 @@ process.source = cms.Source("PoolSource",
 if "eos/cms" in options.inputFolder:
     files = subprocess.check_output(['xrdfs', 'root://eoscms.cern.ch/', 'ls', options.inputFolder])
     process.source.fileNames = ["root://eoscms.cern.ch//" + f for f in files.split()]
+
 
 elif "/xrd/" in options.inputFolder:
     files = subprocess.check_output(['xrdfs', 'root://cms-xrdr.sdfarm.kr/', 'ls', options.inputFolder])

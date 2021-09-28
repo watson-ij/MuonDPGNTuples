@@ -4,7 +4,7 @@ from WMCore.Configuration import Configuration
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = 'CRUZET_344632_Prompt'
+config.General.requestName = 'CRUZET_345084_Prompt'
 config.General.workArea = "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/"
 config.General.transferOutputs = True
 config.General.transferLogs = True
@@ -22,8 +22,8 @@ config.Data.splitting = 'Automatic'
 config.Data.unitsPerJob = 180
 config.Data.publication = False
 config.Data.outLFNDirBase = '/store/user/fivone/GEMMuonNtuplizerZmumu'
-config.Data.outputDatasetTag = 'CRUZET_344632_Prompt'
-config.Data.runRange = '344632'
+config.Data.outputDatasetTag = 'CRUZET_345084_Prompt'
+config.Data.runRange = '345084'
 
 config.section_("Site")
 config.Site.storageSite = 'T2_DE_RWTH'
