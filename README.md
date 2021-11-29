@@ -1,6 +1,7 @@
 # MuonDPGNtuples
 
 Repository to host common ntuples developed and maintained by the CMS muon DPGs.
+Works with CMSSW 12. For crab submission use crab-dev
 
 ## Installation:
 ### Download 
@@ -95,6 +96,12 @@ A complete example showing how to include phase-1 and phase-2 DT digis is availa
                         event_runNumber/I (TBranch)
                         event_lumiBlock/I (TBranch)
                         event_eventNumber/L (TBranch)
+                        event_bunchCrossing/I (TBranch)
+                        event_orbitNumber/I (TBranch)
+                        event_1stLast_L1A/I (TBranch)
+                        event_2ndLast_L1A/I (TBranch)
+                        event_3rdLast_L1A/I (TBranch)
+                        event_4thLast_L1A/I (TBranch)
                         gemDigi_nDigis/i (TBranch)
                         gemDigi_station (TBranchElement)
                         gemDigi_region (TBranchElement)
