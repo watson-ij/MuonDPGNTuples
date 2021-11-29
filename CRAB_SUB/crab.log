@@ -1,48 +1,1512 @@
-DEBUG 2021-05-28 09:19:17.743 UTC: 	 CRAB Client version: v3.210323
-DEBUG 2021-05-28 09:19:17.744 UTC: 	 Running on: Linux lxplus734.cern.ch 3.10.0-1160.24.1.el7.x86_64 #1 SMP Thu Apr 8 19:51:47 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
-DEBUG 2021-05-28 09:19:17.744 UTC: 	 Executing command: 'submit'
-DEBUG 2021-05-28 09:19:17.745 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
-INFO 2021-05-28 09:19:17.764 UTC: 	 Will use CRAB configuration file crabConfig.py
-DEBUG 2021-05-28 09:19:17.764 UTC: 	 Loading CRAB configuration file.
-DEBUG 2021-05-28 09:19:17.777 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
-ERROR 2021-05-28 09:19:17.778 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+DEBUG 2021-07-26 09:05:23.796 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-26 09:05:23.796 UTC: 	 Running on: Linux lxplus735.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-26 09:05:23.796 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-26 09:05:23.814 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-07-26 09:05:23.835 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-07-26 09:05:23.835 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-07-26 09:05:23.874 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-07-26 09:05:23.875 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
 Please change the requestName in the config file
-ERROR 2021-05-28 09:19:17.778 UTC: 	 Caught ClientException exception
+ERROR 2021-07-26 09:05:23.875 UTC: 	 Caught ClientException exception
 Traceback (most recent call last):
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 165, in <module>
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
     client()
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 150, in __call__
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
     self.cmd = sub_cmd(self.logger, args[1:])
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/submit.py", line 34, in __init__
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
     SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
     getattr(self.configuration.General, 'requestName', None))
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/ClientUtilities.py", line 402, in createWorkArea
-    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
-ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
-Please change the requestName in the config file
-INFO 2021-05-28 09:19:17.783 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CMSSW_11_2_4/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
-DEBUG 2021-06-11 07:49:23.066 UTC: 	 CRAB Client version: v3.210601
-DEBUG 2021-06-11 07:49:23.066 UTC: 	 Running on: Linux lxplus749.cern.ch 3.10.0-1160.25.1.el7.x86_64 #1 SMP Wed Apr 28 21:49:45 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
-DEBUG 2021-06-11 07:49:23.066 UTC: 	 Executing command: 'submit'
-DEBUG 2021-06-11 07:49:23.066 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
-INFO 2021-06-11 07:49:23.068 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
-DEBUG 2021-06-11 07:49:23.068 UTC: 	 Loading CRAB configuration file.
-DEBUG 2021-06-11 07:49:23.090 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
-ERROR 2021-06-11 07:49:23.090 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
-Please change the requestName in the config file
-ERROR 2021-06-11 07:49:23.091 UTC: 	 Caught ClientException exception
-Traceback (most recent call last):
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/bin/crab", line 151, in <module>
-    client()
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/bin/crab", line 136, in __call__
-    self.cmd = sub_cmd(self.logger, args[1:])
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/Commands/submit.py", line 34, in __init__
-    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
-    getattr(self.configuration.General, 'requestName', None))
-  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210601.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/ClientUtilities.py", line 394, in createWorkArea
     raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
 ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
 Please change the requestName in the config file
-INFO 2021-06-11 07:49:23.115 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+INFO 2021-07-26 09:05:23.878 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-07-26 11:59:23.604 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-26 11:59:23.604 UTC: 	 Running on: Linux lxplus713.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-26 11:59:23.604 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-26 11:59:23.605 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-07-26 11:59:23.606 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-07-26 11:59:23.606 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-07-26 11:59:23.607 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-07-26 11:59:23.607 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+ERROR 2021-07-26 11:59:23.607 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+INFO 2021-07-26 11:59:23.630 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-07-26 12:52:50.890 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-26 12:52:50.890 UTC: 	 Running on: Linux lxplus713.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-26 12:52:50.890 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-26 12:52:50.891 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-07-26 12:52:50.893 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-07-26 12:52:50.893 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-07-26 12:52:51.103 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-07-26 12:52:51.104 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+ERROR 2021-07-26 12:52:51.104 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/MWGR4/CMSSW_11_3_1_patch1/src/MuDPGAnalysis/crab_GEMMuonNTuplizerOverMC' already exists 
+Please change the requestName in the config file
+INFO 2021-07-26 12:52:51.108 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-07-27 14:04:19.607 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-27 14:04:19.607 UTC: 	 Running on: Linux lxplus797.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-27 14:04:19.607 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-27 14:04:19.612 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+ERROR 2021-07-27 14:04:19.637 UTC: 	 CRAB configuration file muDpgNtuples_cfg.py not found.
+ERROR 2021-07-27 14:04:19.637 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 52, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file muDpgNtuples_cfg.py not found.
+INFO 2021-07-27 14:04:19.658 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-07-27 14:45:41.169 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-27 14:45:41.169 UTC: 	 Running on: Linux lxplus797.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-27 14:45:41.169 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-27 14:45:41.185 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-07-27 16:01:20.954 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-07-27 16:01:20.955 UTC: 	 Running on: Linux lxplus797.cern.ch 3.10.0-1160.31.1.el7.x86_64 #1 SMP Thu Jun 10 13:32:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-07-27 16:01:20.955 UTC: 	 Executing command: 'submit'
+DEBUG 2021-07-27 16:01:20.958 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-07-27 16:01:20.973 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-07-27 16:01:20.973 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-07-27 16:01:20.991 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-07-27 16:01:20.991 UTC: 	 Invalid CRAB configuration:
+ when ignoreLocality is set a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2021-07-27 16:01:20.991 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Invalid CRAB configuration:
+ when ignoreLocality is set a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2021-07-27 16:01:21.022 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-08-11 07:26:31.895 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-08-11 07:26:31.895 UTC: 	 Running on: Linux lxplus781.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-08-11 07:26:31.895 UTC: 	 Executing command: 'submit'
+DEBUG 2021-08-11 07:26:31.895 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+ERROR 2021-08-11 07:26:31.897 UTC: 	 CRAB configuration file M not found.
+ERROR 2021-08-11 07:26:31.897 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 52, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file M not found.
+INFO 2021-08-11 07:26:31.931 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-08-11 10:34:57.209 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-08-11 10:34:57.210 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-08-11 10:34:57.210 UTC: 	 Executing command: 'submit'
+DEBUG 2021-08-11 10:34:57.210 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-08-11 10:34:57.211 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-08-11 10:34:57.211 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-08-11 10:34:57.212 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-08-11 10:34:57.264 UTC: 	 Keyboard Interrupted
+INFO 2021-08-11 10:34:57.330 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-08-11 10:34:59.375 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-08-11 10:34:59.376 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-08-11 10:34:59.376 UTC: 	 Executing command: 'submit'
+DEBUG 2021-08-11 10:34:59.376 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-08-11 10:34:59.377 UTC: 	 Will use CRAB configuration file MWGR_crabConfig.py
+DEBUG 2021-08-11 10:34:59.377 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-08-11 10:34:59.378 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-08-11 10:34:59.378 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/crab_CRUZET_344421_Prompt' already exists 
+Please change the requestName in the config file
+ERROR 2021-08-11 10:34:59.379 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 315, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/crab_CRUZET_344421_Prompt' already exists 
+Please change the requestName in the config file
+INFO 2021-08-11 10:34:59.381 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-08-11 13:23:31.712 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-08-11 13:23:31.713 UTC: 	 Running on: Linux lxplus758.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-08-11 13:23:31.713 UTC: 	 Executing command: 'submit'
+DEBUG 2021-08-11 13:23:31.713 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-08-11 13:23:34.042 UTC: 	 CRAB Client version: v3.210610
+DEBUG 2021-08-11 13:23:34.042 UTC: 	 Running on: Linux lxplus758.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-08-11 13:23:34.042 UTC: 	 Executing command: 'submit'
+DEBUG 2021-08-11 13:23:34.042 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+ERROR 2021-08-11 13:23:34.044 UTC: 	 CRAB configuration file M not found.
+ERROR 2021-08-11 13:23:34.044 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 151, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/bin/crab", line 136, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210610.01/lib/CRABClient/Commands/SubCommand.py", line 52, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file M not found.
+INFO 2021-08-11 13:23:34.046 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-10-26 10:34:10.761 UTC: 	 CRAB Client version: v3.211015
+DEBUG 2021-10-26 10:34:10.761 UTC: 	 Running on: Linux lxplus704.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-26 10:34:10.761 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-26 10:34:10.762 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-10-26 10:34:10.763 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-10-26 10:34:10.763 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-10-26 10:34:10.775 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-10-26 10:34:10.776 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/crab_CRUZET_346157_Prompt' already exists 
+Please change the requestName in the config file
+ERROR 2021-10-26 10:34:10.776 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/Commands/SubCommand.py", line 313, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2/src/MuDPGAnalysis/crab_CRUZET_346157_Prompt' already exists 
+Please change the requestName in the config file
+INFO 2021-10-26 10:34:10.789 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-10-26 10:36:26.002 UTC: 	 CRAB Client version: v3.211015
+DEBUG 2021-10-26 10:36:26.002 UTC: 	 Running on: Linux lxplus704.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-26 10:36:26.002 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-26 10:36:26.002 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-10-26 10:36:26.003 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-10-26 10:36:26.003 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-10-26 10:36:26.009 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-10-26 10:36:26.014 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_CRUZET_346157_Prompt' already exists 
+Please change the requestName in the config file
+ERROR 2021-10-26 10:36:26.015 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/Commands/SubCommand.py", line 313, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211015.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_CRUZET_346157_Prompt' already exists 
+Please change the requestName in the config file
+INFO 2021-10-26 10:36:26.023 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-10-29 18:44:06.112 UTC: 	 CRAB Client version: v3.211026
+DEBUG 2021-10-29 18:44:06.112 UTC: 	 Running on: Linux lxplus704.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-29 18:44:06.112 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-29 18:44:06.113 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-10-29 18:44:06.133 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-10-29 18:44:06.133 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-10-29 18:44:06.214 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-10-29 18:44:06.214 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_Prompt' already exists 
+Please change the requestName in the config file
+ERROR 2021-10-29 18:44:06.215 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 313, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_Prompt' already exists 
+Please change the requestName in the config file
+INFO 2021-10-29 18:44:06.273 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-10-31 17:41:38.512 UTC: 	 CRAB Client version: v3.211026
+DEBUG 2021-10-31 17:41:38.512 UTC: 	 Running on: Linux lxplus709.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-31 17:41:38.512 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-31 17:41:38.524 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-10-31 17:41:38.553 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-10-31 17:41:38.553 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-10-31 17:41:38.563 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-10-31 17:41:38.563 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_ZeroBias1' already exists 
+Please change the requestName in the config file
+ERROR 2021-10-31 17:41:38.563 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 313, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_ZeroBias1' already exists 
+Please change the requestName in the config file
+INFO 2021-10-31 17:41:38.651 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-10-31 17:45:03.615 UTC: 	 CRAB Client version: v3.211026
+DEBUG 2021-10-31 17:45:03.615 UTC: 	 Running on: Linux lxplus709.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-10-31 17:45:03.615 UTC: 	 Executing command: 'submit'
+DEBUG 2021-10-31 17:45:03.615 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-10-31 17:45:03.617 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-10-31 17:45:03.617 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-10-31 17:45:03.618 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2021-10-31 17:45:03.618 UTC: 	 Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_ZeroBias4' already exists 
+Please change the requestName in the config file
+ERROR 2021-10-31 17:45:03.618 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 313, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/ClientUtilities.py", line 399, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346247_ZeroBias4' already exists 
+Please change the requestName in the config file
+INFO 2021-10-31 17:45:03.622 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-04 18:23:53.277 UTC: 	 CRAB Client version: v3.211026
+DEBUG 2021-11-04 18:23:53.278 UTC: 	 Running on: Linux lxplus740.cern.ch 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-04 18:23:53.278 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-04 18:23:53.278 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-04 18:23:53.279 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-04 18:23:53.279 UTC: 	 Loading CRAB configuration file.
+ERROR 2021-11-04 18:23:53.284 UTC: 	 Error while loading CRAB configuration:
+'return' outside function (P5Data_crabConfig.py, line 44)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2021-11-04 18:23:53.284 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 603, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 44
+    return 0
+    ^
+SyntaxError: 'return' outside function
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 55, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 611, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py
+Due to error:
+'return' outside function (P5Data_crabConfig.py, line 44)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 603, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 44
+    return 0
+    ^
+SyntaxError: 'return' outside function
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 89, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+'return' outside function (P5Data_crabConfig.py, line 44)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2021-11-04 18:23:53.311 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-08 17:59:00.178 UTC: 	 CRAB Client version: v3.211026
+DEBUG 2021-11-08 17:59:00.179 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-08 17:59:00.179 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-08 17:59:00.180 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-08 17:59:00.204 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-08 17:59:00.204 UTC: 	 Loading CRAB configuration file.
+ERROR 2021-11-08 17:59:00.267 UTC: 	 Error while loading CRAB configuration:
+invalid syntax (P5Data_crabConfig.py, line 43)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2021-11-08 17:59:00.267 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 603, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 43
+    config.Data.outputDatasetTag = "TEEEEST" @#str(run_number)+'_Prompt_MinimumBias'+str(min_bias_index)
+                                              ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 55, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 611, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py
+Due to error:
+invalid syntax (P5Data_crabConfig.py, line 43)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/WMCore/Configuration.py", line 603, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 43
+    config.Data.outputDatasetTag = "TEEEEST" @#str(run_number)+'_Prompt_MinimumBias'+str(min_bias_index)
+                                              ^
+SyntaxError: invalid syntax
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 150, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/bin/crab", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/submit.py", line 38, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 311, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211026.00/lib/CRABClient/Commands/SubCommand.py", line 89, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+invalid syntax (P5Data_crabConfig.py, line 43)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2021-11-08 17:59:00.292 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-29 11:54:29.872 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 11:54:29.873 UTC: 	 Running on: Linux lxplus705.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 11:54:29.873 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 11:54:29.874 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-29 11:54:29.990 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-29 11:54:29.990 UTC: 	 Loading CRAB configuration file.
+ERROR 2021-11-29 11:54:30.083 UTC: 	 Error while loading CRAB configuration:
+unexpected indent (P5Data_crabConfig.py, line 47)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2021-11-29 11:54:30.083 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/WMCore/Configuration.py", line 325, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 47
+    crabCommand('submit', config = config)
+IndentationError: unexpected indent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/CRABClient/Commands/SubCommand.py", line 55, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/WMCore/Configuration.py", line 333, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py
+Due to error:
+unexpected indent (P5Data_crabConfig.py, line 47)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/WMCore/Configuration.py", line 325, in loadConfigurationFile
+    modRef = imp.load_module(cfgBaseName, modPath[0],
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/python3/3.9.6/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/P5Data_crabConfig.py", line 47
+    crabCommand('submit', config = config)
+IndentationError: unexpected indent
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/bin/crab.py", line 149, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/bin/crab.py", line 134, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/CRABClient/Commands/SubCommand.py", line 310, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-dev/v3.211125.00/lib/CRABClient/Commands/SubCommand.py", line 89, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+unexpected indent (P5Data_crabConfig.py, line 47)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2021-11-29 11:54:30.110 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-29 18:33:16.724 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:16.724 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:16.724 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:16.724 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:33:16.725 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:33:14.875 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:14.875 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:14.875 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:14.875 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-29 18:33:14.876 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-29 18:33:14.876 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-11-29 18:33:14.913 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:14.913 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:14.913 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:14.913 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:33:14.914 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:33:14.924 UTC: 	 Checking credentials
+DEBUG 2021-11-29 18:33:14.924 UTC: 	 Found proxy file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:33:14.924 UTC: 	 Getting proxy life time left
+DEBUG 2021-11-29 18:33:14.924 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:33:15.495 UTC: 	 output : 42618
+42618
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:33:15.495 UTC: 	 Proxy valid for 11:50:18 hours
+DEBUG 2021-11-29 18:33:15.560 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2021-11-29 18:33:15.569 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlDataa2gxid --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=delegatedn" | tee /dev/stderr 
+DEBUG 2021-11-29 18:33:15.680 UTC: 	 output : {"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=delegatedn HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 22
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [22 bytes data]
+* upload completely sent off: 22 out of 22 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:33:15 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 213
+< X-Rest-Time: 40172.100 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "de92dcb56f87dabbe30965e60a433c3f1b873eab"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=58277 t=1638210795616357
+< 
+{ [5 bytes data]
+100   235  100   213  100    22   2476    255 --:--:-- --:--:-- --:--:--  2732
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:33:15.681 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2021-11-29 18:33:15.682 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:33:16.245 UTC: 	 output : /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:33:16.245 UTC: 	 Getting myproxy life time left for ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:33:16.245 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:33:16.395 UTC: 	 output : username: ce5587db69214f8079031cbd10cf0115c456e711
+owner: /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 713:21:47  (29.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:33:16.395 UTC: 	 Myproxy is valid: 2568060
+DEBUG 2021-11-29 18:33:16.396 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: ce5587db69214f8079031cbd10cf0115c456e711  - validity: 29 days, 17:21:00
+DEBUG 2021-11-29 18:33:16.396 UTC: 	 Command use: submit
+DEBUG 2021-11-29 18:33:16.396 UTC: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x7f4e5ba3ddd0>]
+DEBUG 2021-11-29 18:33:16.396 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2021-11-29 18:33:16.396 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlDatarvarff --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=version" | tee /dev/stderr 
+DEBUG 2021-11-29 18:33:16.518 UTC: 	 output : {"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=version HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 19
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [19 bytes data]
+* upload completely sent off: 19 out of 19 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:33:16 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 72
+< X-Rest-Time: 64565.897 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "4bf4197548de80f1e971ce71b9cac964ba2d10fd"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=75022 t=1638210796437431
+< 
+ 20    91    0     0  100    19      0    190 --:--:-- --:--:-- --:--:--   188{ [5 bytes data]
+100    91  100    72  100    19    720    190 --:--:-- --:--:-- --:--:--   900
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 CRABClient version: v3.211125
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 Instance is prod
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 Command api workflow
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 Started submission
+DEBUG 2021-11-29 18:33:16.519 UTC: 	 Working on /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346919_Prompt_CosmicsPrompt
+DEBUG 2021-11-29 18:33:16.520 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2021-11-29 18:33:16.520 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlData0C6FzM --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=backendurls" | tee /dev/stderr 
+DEBUG 2021-11-29 18:33:16.614 UTC: 	 output : {"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=backendurls HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 23
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [23 bytes data]
+* upload completely sent off: 23 out of 23 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:33:16 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 2232
+< Vary: Accept-Encoding,Accept
+< X-Rest-Time: 35723.925 us
+< X-Rest-Status: 100
+< Etag: "13a3f6e685a47bdcddbe84db6cfdd7c0e483615e"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=47848 t=1638210796559769
+< 
+{ [5 bytes data]
+100  2255  100  2232  100    23  30575    315 --:--:-- --:--:-- --:--:-- 30890
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:33:16.700 UTC: 	 Loading required information from the environment
+DEBUG 2021-11-29 18:33:16.700 UTC: 	 Found CMSSW_11_3_2 for slc7_amd64_gcc900 with base /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRUZET/CMSSW_11_3_2
+INFO 2021-11-29 18:33:16.826 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:33:33.265 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:33:33.287 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:33.288 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:33.288 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:33.288 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:33:33.289 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:33:33.214 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:33.214 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:33.214 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:33.214 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-29 18:33:33.215 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-29 18:33:33.215 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:33:33.264 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:33:33.265 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+INFO 2021-11-29 18:33:33.298 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-29 18:34:10.279 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:34:10.279 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:34:10.279 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:34:10.279 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:34:10.280 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:34:08.582 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:34:08.582 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:34:08.582 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:34:08.583 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-29 18:34:08.583 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-29 18:34:08.584 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-11-29 18:34:08.603 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:34:08.603 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:34:08.603 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:34:08.603 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:34:08.604 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:34:08.613 UTC: 	 Checking credentials
+DEBUG 2021-11-29 18:34:08.613 UTC: 	 Found proxy file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:34:08.613 UTC: 	 Getting proxy life time left
+DEBUG 2021-11-29 18:34:08.613 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:34:09.232 UTC: 	 output : 42564
+42564
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:34:09.232 UTC: 	 Proxy valid for 11:49:24 hours
+DEBUG 2021-11-29 18:34:09.242 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2021-11-29 18:34:09.242 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlData_4gbd9f2 --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=delegatedn" | tee /dev/stderr 
+DEBUG 2021-11-29 18:34:09.317 UTC: 	 output : {"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=delegatedn HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 22
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [22 bytes data]
+* upload completely sent off: 22 out of 22 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:34:09 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 213
+< X-Rest-Time: 16888.142 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "de92dcb56f87dabbe30965e60a433c3f1b873eab"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=29207 t=1638210849280954
+< 
+{ [5 bytes data]
+100   235  100   213  100    22   4346    448 --:--:-- --:--:-- --:--:--  4895
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:34:09.318 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2021-11-29 18:34:09.319 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:34:09.874 UTC: 	 output : /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:34:09.875 UTC: 	 Getting myproxy life time left for ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:34:09.875 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:34:10.010 UTC: 	 output : username: ce5587db69214f8079031cbd10cf0115c456e711
+owner: /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 713:20:53  (29.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:34:10.010 UTC: 	 Myproxy is valid: 2568000
+DEBUG 2021-11-29 18:34:10.010 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: ce5587db69214f8079031cbd10cf0115c456e711  - validity: 29 days, 17:20:00
+DEBUG 2021-11-29 18:34:10.011 UTC: 	 Command use: submit
+DEBUG 2021-11-29 18:34:10.011 UTC: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x7f27e4de2880>]
+DEBUG 2021-11-29 18:34:10.011 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2021-11-29 18:34:10.039 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlData6s15dnm5 --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=version" | tee /dev/stderr 
+DEBUG 2021-11-29 18:34:10.146 UTC: 	 output : {"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=version HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 19
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [19 bytes data]
+* upload completely sent off: 19 out of 19 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:34:10 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 72
+< X-Rest-Time: 40282.011 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "4bf4197548de80f1e971ce71b9cac964ba2d10fd"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=70818 t=1638210850069420
+< 
+{ [5 bytes data]
+100    91  100    72  100    19    818    215 --:--:-- --:--:-- --:--:--  1034
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:34:10.147 UTC: 	 CRABClient version: v3.211125
+DEBUG 2021-11-29 18:34:10.147 UTC: 	 Instance is prod
+DEBUG 2021-11-29 18:34:10.147 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-11-29 18:34:10.147 UTC: 	 Command api workflow
+DEBUG 2021-11-29 18:34:10.147 UTC: 	 Started submission
+DEBUG 2021-11-29 18:34:10.148 UTC: 	 Working on /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346919_Prompt_CosmicsPrompt
+DEBUG 2021-11-29 18:34:10.148 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2021-11-29 18:34:10.148 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlDatawuxyur0z --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=backendurls" | tee /dev/stderr 
+DEBUG 2021-11-29 18:34:10.209 UTC: 	 output : {"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.185.88.214:8443...
+* Connected to cmsweb.cern.ch (188.185.88.214) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [5309 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=backendurls HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 23
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [23 bytes data]
+* upload completely sent off: 23 out of 23 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:34:10 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 2232
+< Vary: Accept-Encoding,Accept
+< X-Rest-Time: 11139.154 us
+< X-Rest-Status: 100
+< Etag: "13a3f6e685a47bdcddbe84db6cfdd7c0e483615e"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=24163 t=1638210850178917
+< 
+{ [5 bytes data]
+100  2255  100  2232  100    23  54439    560 --:--:-- --:--:-- --:--:-- 55000
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:34:10.256 UTC: 	 Loading required information from the environment
+DEBUG 2021-11-29 18:34:10.256 UTC: 	 Found CMSSW_12_0_0 for slc7_amd64_gcc900 with base /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0
+INFO 2021-11-29 18:34:10.291 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log
+DEBUG 2021-11-29 18:36:28.764 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:36:28.765 UTC: 	 Running on: Linux lxplus755.cern.ch 3.10.0-1160.42.2.el7.x86_64 #1 SMP Tue Sep 7 14:49:57 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:36:28.765 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:36:28.765 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:36:28.766 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:36:26.713 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:36:26.713 UTC: 	 Running on: Linux lxplus755.cern.ch 3.10.0-1160.42.2.el7.x86_64 #1 SMP Tue Sep 7 14:49:57 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:36:26.713 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:36:26.714 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+INFO 2021-11-29 18:36:26.717 UTC: 	 Will use CRAB configuration file P5Data_crabConfig.py
+DEBUG 2021-11-29 18:36:26.717 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-11-29 18:36:26.764 UTC: 	 CRAB Client version: v3.211125
+DEBUG 2021-11-29 18:36:26.764 UTC: 	 Running on: Linux lxplus755.cern.ch 3.10.0-1160.42.2.el7.x86_64 #1 SMP Tue Sep 7 14:49:57 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-11-29 18:36:26.764 UTC: 	 Executing command: 'submit'
+DEBUG 2021-11-29 18:36:26.764 UTC: 	 Found CRAB cache file /afs/cern.ch/user/f/fivone/.crab3
+DEBUG 2021-11-29 18:36:26.765 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-11-29 18:36:26.775 UTC: 	 Checking credentials
+DEBUG 2021-11-29 18:36:26.775 UTC: 	 Found proxy file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:36:26.775 UTC: 	 Getting proxy life time left
+DEBUG 2021-11-29 18:36:26.775 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:36:27.572 UTC: 	 output : 43189
+43189
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:36:27.572 UTC: 	 Proxy valid for 11:59:49 hours
+DEBUG 2021-11-29 18:36:27.588 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2021-11-29 18:36:27.589 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlDatahgq7tg8h --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=delegatedn" | tee /dev/stderr 
+DEBUG 2021-11-29 18:36:27.669 UTC: 	 output : {"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.75.95:8443...
+* Connected to cmsweb.cern.ch (188.184.75.95) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [4823 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=delegatedn HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 22
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [22 bytes data]
+* upload completely sent off: 22 out of 22 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:36:27 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 213
+< X-Rest-Time: 16300.917 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "de92dcb56f87dabbe30965e60a433c3f1b873eab"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=29848 t=1638210987633119
+< 
+{ [5 bytes data]
+100   235  100   213  100    22   4096    423 --:--:-- --:--:-- --:--:--  4519
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:36:27.670 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2021-11-29 18:36:27.670 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u116526
+DEBUG 2021-11-29 18:36:28.303 UTC: 	 output : /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:36:28.303 UTC: 	 Getting myproxy life time left for ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:36:28.303 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l ce5587db69214f8079031cbd10cf0115c456e711
+DEBUG 2021-11-29 18:36:28.506 UTC: 	 output : username: ce5587db69214f8079031cbd10cf0115c456e711
+owner: /C=DE/O=GermanGrid/OU=RWTH/CN=Francesco Ivone
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 713:18:35  (29.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-11-29 18:36:28.506 UTC: 	 Myproxy is valid: 2567880
+DEBUG 2021-11-29 18:36:28.506 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: ce5587db69214f8079031cbd10cf0115c456e711  - validity: 29 days, 17:18:00
+DEBUG 2021-11-29 18:36:28.506 UTC: 	 Command use: submit
+DEBUG 2021-11-29 18:36:28.506 UTC: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x7f97da6a8880>]
+DEBUG 2021-11-29 18:36:28.507 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2021-11-29 18:36:28.508 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlData76xyq_or --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=version" | tee /dev/stderr 
+DEBUG 2021-11-29 18:36:28.605 UTC: 	 output : {"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.75.95:8443...
+* Connected to cmsweb.cern.ch (188.184.75.95) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [4823 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=version HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 19
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [19 bytes data]
+* upload completely sent off: 19 out of 19 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:36:28 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 72
+< X-Rest-Time: 38978.100 us
+< X-Rest-Status: 100
+< Vary: Accept
+< Etag: "4bf4197548de80f1e971ce71b9cac964ba2d10fd"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=52907 t=1638210988547598
+< 
+{ [5 bytes data]
+100    91  100    72  100    19   1000    263 --:--:-- --:--:-- --:--:--  1263
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "v3.210701"]
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 CRABClient version: v3.211125
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 Instance is prod
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 Command api workflow
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 Started submission
+DEBUG 2021-11-29 18:36:28.606 UTC: 	 Working on /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/crab_346919_Prompt_CosmicsPrompt
+DEBUG 2021-11-29 18:36:28.607 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2021-11-29 18:36:28.607 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.211125" -H "Accept: */*" --data @/tmp/curlDataero1_gj6 --cert "/tmp/x509up_u116526" --key "/tmp/x509up_u116526" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=backendurls" | tee /dev/stderr 
+DEBUG 2021-11-29 18:36:28.674 UTC: 	 output : {"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.75.95:8443...
+* Connected to cmsweb.cern.ch (188.184.75.95) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6224 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [4823 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb  2 08:08:53 2021 GMT
+*  expire date: Mar  9 08:08:53 2022 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=backendurls HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.211125
+> Accept: */*
+> Content-Length: 23
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [23 bytes data]
+* upload completely sent off: 23 out of 23 bytes
+{ [5 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Mon, 29 Nov 2021 18:36:28 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 2232
+< Vary: Accept-Encoding,Accept
+< X-Rest-Time: 8383.036 us
+< X-Rest-Status: 100
+< Etag: "13a3f6e685a47bdcddbe84db6cfdd7c0e483615e"
+< Cache-Control: max-age=3600
+< CMS-Server-Time: D=21286 t=1638210988648627
+< 
+{ [5 bytes data]
+100  2255  100  2232  100    23  53142    547 --:--:-- --:--:-- --:--:-- 53690
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorSchedds": {"crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}}, "cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ retcode : 0
+DEBUG 2021-11-29 18:36:28.736 UTC: 	 Loading required information from the environment
+DEBUG 2021-11-29 18:36:28.736 UTC: 	 Found CMSSW_12_0_0 for slc7_amd64_gcc900 with base /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0
+INFO 2021-11-29 18:36:28.787 UTC: 	 Log file is /afs/cern.ch/user/f/fivone/Documents/NTuplizer/CRAFT/CMSSW_12_0_0/src/MuDPGAnalysis/MuonDPGNtuples/CRAB_SUB/crab.log

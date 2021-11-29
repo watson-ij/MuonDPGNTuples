@@ -387,7 +387,8 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
 	      for(; recHitMu != recHitMuEnd; ++recHitMu)
               {
                   DetId detId = (*recHitMu)->geographicalId();
-                  
+                  if(detId.det() == DetId::Muon && detId.subdetId() == MuonSubdetId::GEM)
+                      {std::cout<<"GEM found in STA track"<<std::endl;}
                   if(detId.det() == DetId::Muon && detId.subdetId() == MuonSubdetId::CSC)
                       {
                           isCSC = true;

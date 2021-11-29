@@ -2,7 +2,7 @@
 #define MuNTuple_EventFiller_h
 
 #include "MuDPGAnalysis/MuonDPGNtuples/src/MuNtupleBaseFiller.h"
-
+#include "DataFormats/TCDS/interface/TCDSRecord.h"
 #include "FWCore/Framework/interface/ConsumesCollector.h"
 
 #include <vector>
@@ -31,10 +31,17 @@ class MuNtupleEventFiller : public MuNtupleBaseFiller
   virtual void fill(const edm::Event & ev) final;    
 
  private :
+  edm::EDGetTokenT<TCDSRecord> m_TCDStoken;
 
   int m_runNumber;
   int  m_lumiBlock;
   int64_t m_eventNumber;
+  int m_bunchCrossing;
+  int m_orbitNumber;
+  int m_L1A_1_Diff;
+  int m_L1A_2_Diff;
+  int m_L1A_3_Diff;
+  int m_L1A_4_Diff;
 
 };
   

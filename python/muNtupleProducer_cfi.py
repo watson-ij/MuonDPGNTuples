@@ -17,6 +17,7 @@ muNtupleProducer = cms.EDAnalyzer("MuNtupleProducer",
                                   gemSegmentTag = cms.untracked.InputTag("gemSegments"),
                                   cscSegmentTag = cms.untracked.InputTag("cscSegments"),
                                   muonTag = cms.untracked.InputTag("muons"),
+                                  tcdsTag = cms.untracked.InputTag("tcdsDigis","tcdsRecord","RECO"),
                                   
                                   gemSimHitTag = cms.untracked.InputTag("g4SimHits","MuonGEMHits"),
                                   muonSimTag = cms.untracked.InputTag("muons"),

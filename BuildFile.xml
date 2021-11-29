@@ -10,6 +10,7 @@
 <use name="DataFormats/Common"/>
 <use name="DataFormats/DTDigi"/>
 <use name="DataFormats/DTRecHit"/>
+<use name="DataFormats/TCDS"/>
 <use name="Geometry/GEMGeometry"/>
 <use name="DataFormats/GEMDigi"/>
 <use name="DataFormats/GEMRecHit"/>
