@@ -88,10 +88,10 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
   std::vector<bool>  m_isMedium; // Medium muon ID
   std::vector<bool>  m_isTight;  // Tight muon ID
 
-  std::vector<bool> m_isincoming;
-  std::vector<bool> m_isinsideout;
+  std::vector<bool> m_propagated_isincoming;
+  std::vector<bool> m_propagated_isinsideout;
   
-  float m_path_length;
+  float m_propagated_path_length;
 
   std::vector<int> m_propagated_region;
   std::vector<int> m_propagated_layer;
