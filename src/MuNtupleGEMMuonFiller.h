@@ -103,6 +103,11 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
   std::vector<float> m_propagated_eta;
   std::vector<float> m_propagated_charge;
 
+  std::vector<float> m_propagatedSeg_pt;
+  std::vector<float> m_propagatedSeg_phi;
+  std::vector<float> m_propagatedSeg_eta;
+  std::vector<float> m_propagatedSeg_charge;
+
   std::vector<float> m_propagated_TrackNormChi2;
 
   std::vector<float> m_propagated_numberOfValidPixelHits;
@@ -120,6 +125,17 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
   std::vector<float> m_propagatedLoc_errX;
   std::vector<float> m_propagatedLoc_errY;
 
+  std::vector<float> m_propagatedSegLoc_x;
+  std::vector<float> m_propagatedSegLoc_y;
+  std::vector<float> m_propagatedSegLoc_z;
+  std::vector<float> m_propagatedSegLoc_r;
+  std::vector<float> m_propagatedSegLoc_phi;
+  std::vector<float> m_propagatedSegLoc_dirX;
+  std::vector<float> m_propagatedSegLoc_dirY;
+  std::vector<float> m_propagatedSegLoc_dirZ;
+  std::vector<float> m_propagatedSegLoc_errX;
+  std::vector<float> m_propagatedSegLoc_errY;
+
   std::vector<float> m_propagatedGlb_x;
   std::vector<float> m_propagatedGlb_y;
   std::vector<float> m_propagatedGlb_z;
@@ -129,6 +145,16 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
   std::vector<float> m_propagatedGlb_errY;
   std::vector<float> m_propagatedGlb_phierr;
   std::vector<float> m_propagatedGlb_rerr;
+
+  std::vector<float> m_propagatedSegGlb_x;
+  std::vector<float> m_propagatedSegGlb_y;
+  std::vector<float> m_propagatedSegGlb_z;
+  std::vector<float> m_propagatedSegGlb_r;
+  std::vector<float> m_propagatedSegGlb_phi;
+  std::vector<float> m_propagatedSegGlb_errX;
+  std::vector<float> m_propagatedSegGlb_errY;
+  std::vector<float> m_propagatedSegGlb_phierr;
+  std::vector<float> m_propagatedSegGlb_rerr;
 
   std::vector<float> m_propagated_EtaPartition_centerX;
   std::vector<float> m_propagated_EtaPartition_centerY;
