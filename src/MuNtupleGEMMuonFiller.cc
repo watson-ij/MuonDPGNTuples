@@ -178,7 +178,7 @@ void MuNtupleGEMMuonFiller::initialize()
   m_tree->Branch((m_label + "_propagatedSegGlb_y").c_str(), &m_propagatedSegGlb_y);
   m_tree->Branch((m_label + "_propagatedSegGlb_z").c_str(), &m_propagatedSegGlb_z);
   m_tree->Branch((m_label + "_propagatedSegGlb_r").c_str(), &m_propagatedSegGlb_r);
-  m_tree->Branch((m_label + "_propagatedSegGlb_phi").c_str(), &m_propagatedGlb_phi);
+  m_tree->Branch((m_label + "_propagatedSegGlb_phi").c_str(), &m_propagatedSegGlb_phi);
   m_tree->Branch((m_label + "_propagatedSegGlb_errX").c_str(), &m_propagatedSegGlb_errX);
   m_tree->Branch((m_label + "_propagatedSegGlb_errY").c_str(), &m_propagatedSegGlb_errY);
   m_tree->Branch((m_label + "_propagatedSegGlb_errR").c_str(), &m_propagatedSegGlb_rerr);
@@ -467,11 +467,11 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
             // ME11 chambers are composed by 2 subchambers: ME11a, ME11b. In CMSSW they are referred as Stat. 1 Ring 1, Stat. 1 Ring. 4 respectively
             if(csc_id.station() == 1 && ((csc_id.ring() == 1) || (csc_id.ring() == 4)) )
             { 
-              isME11 = true;
+              //isME11 = true;
               //extracting ME11 segment
               RecSegment* Rec_segment = (RecSegment*)*recHitMu;
-              ME11_segment = (CSCSegment*)Rec_segment;
-              std::cout<<" extracted ME11 segment "<<ME11_segment<<std::endl;
+              //ME11_segment = (CSCSegment*)*recHitMu;
+              std::cout<<" extracted ME11 segment ignored "<<Rec_segment<<std::endl;
             }
           }
         } //END Loop over recHits to find if is ME11
@@ -483,10 +483,13 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
             auto cscSegRef = MSM.cscSegmentRef;
             auto cscDetID = cscSegRef->cscDetId();
             if(cscDetID.station() == 1 and (cscDetID.ring() == 1 or cscDetID.ring() == 4)){
-              ME11_segment = cscSegRef.get(); 
+              isME11 = true;
+              ME11_segment = cscSegRef.get();
+              std::cout<<" ME11 segment here too "<<ME11_segment<<std::endl;
             }
           }
         }
+        m_isME11.push_back(isME11);
         //BEGIN propagation code (STA TRACK)
         //if at least one CSC hit is found, perform propagation 
         if(isCSC)
