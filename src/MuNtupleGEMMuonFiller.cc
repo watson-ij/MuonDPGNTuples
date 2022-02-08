@@ -467,10 +467,10 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
             // ME11 chambers are composed by 2 subchambers: ME11a, ME11b. In CMSSW they are referred as Stat. 1 Ring 1, Stat. 1 Ring. 4 respectively
             if(csc_id.station() == 1 && ((csc_id.ring() == 1) || (csc_id.ring() == 4)) )
             { 
-              //isME11 = true;
+              isME11 = true;
               //extracting ME11 segment
               RecSegment* Rec_segment = (RecSegment*)*recHitMu;
-              //ME11_segment = (CSCSegment*)*recHitMu;
+              ME11_segment = (CSCSegment*)*recHitMu;
               std::cout<<" extracted ME11 segment ignored "<<Rec_segment<<std::endl;
             }
           }
@@ -483,8 +483,8 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
             auto cscSegRef = MSM.cscSegmentRef;
             auto cscDetID = cscSegRef->cscDetId();
             if(cscDetID.station() == 1 and (cscDetID.ring() == 1 or cscDetID.ring() == 4)){
-              isME11 = true;
-              ME11_segment = cscSegRef.get();
+              //isME11 = true;
+              //ME11_segment = cscSegRef.get();
               std::cout<<" ME11 segment here too "<<ME11_segment<<std::endl;
             }
           }
@@ -684,6 +684,7 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
           //
           //BEGIN propagation code (CSC Segment)
           if(isME11){ 
+            std::cout << "IT IS ME11!" << std::endl;
             DetId segDetId = ME11_segment->geographicalId();
             const GeomDet* segDet = tracking_geometry->idToDet(segDetId);
   
@@ -695,7 +696,14 @@ void MuNtupleGEMMuonFiller::fill(const edm::Event & ev)
             LocalTrajectoryParameters param(ME11_segment->localPosition(), momentum_at_surface, muon.charge());
             AlgebraicSymMatrix mat(5,0);
 
+            std::cout << "ABOUT TO PRINT STUFF!" << std::endl;
+            std::cout << "ME11 SEGMENT: " << ME11_segment << std::endl;
+            std::cout << "PROJECTION MATRIX: " << ME11_segment->projectionMatrix() << std::endl;
+            //std::cout << "LOCAL POSITION ERROR: " << ME11_segment->localPositionError() << std::endl;
+            std::cout << "ERRORS: " << ME11_segment->parametersError() << std::endl;
+            std::cout << "DONE PRINTING ERRORS." << std::endl;
             mat = ME11_segment->parametersError().similarityT( ME11_segment->projectionMatrix() );
+            std::cout << "PRINTING MATRIX " << mat << std::endl;
             LocalTrajectoryError error(asSMatrix<5>(mat));
       
             for (const GEMRegion* gem_region : gem->regions())
