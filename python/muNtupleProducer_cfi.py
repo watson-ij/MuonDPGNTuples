@@ -11,11 +11,11 @@ muNtupleProducer = cms.EDAnalyzer("MuNtupleProducer",
 
                                   ph1DTtTrigMode = cms.untracked.string('DTTTrigSyncFromDB'),
                                   isMC = cms.bool(False),
-                                  gemDigiTag = cms.untracked.InputTag("muonGEMDigis"),
+                                  #gemDigiTag = cms.untracked.InputTag("muonGEMDigis"),
                                   #gemDigiTag = cms.untracked.InputTag("simMuonGEMDigis"),
                                   gemRecHitTag = cms.untracked.InputTag("gemRecHits"),
                                   gemSegmentTag = cms.untracked.InputTag("gemSegments"),
-                                  cscSegmentTag = cms.untracked.InputTag("cscSegments"),
+                                  #cscSegmentTag = cms.untracked.InputTag("cscSegments"),
                                   muonTag = cms.untracked.InputTag("muons"),
                                   tcdsTag = cms.untracked.InputTag("tcdsDigis","tcdsRecord","RECO"),
                                   

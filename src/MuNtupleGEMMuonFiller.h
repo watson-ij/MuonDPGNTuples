@@ -18,6 +18,8 @@
 #include "DataFormats/HLTReco/interface/TriggerEvent.h"
 #include "DataFormats/HLTReco/interface/TriggerObject.h"
 
+#include "RecoLocalMuon/CSCSegment/src/CSCSegAlgoRU.h"
+
 #include <vector>
 #include <fstream>
 #include "TClonesArray.h"
@@ -55,6 +57,9 @@ class MuNtupleGEMMuonFiller : public MuNtupleBaseFiller
 
   edm::EDGetTokenT<edm::TriggerResults>   m_trigResultsToken;
   edm::EDGetTokenT<trigger::TriggerEvent> m_trigEventToken;
+
+  edm::ESGetToken<CSCGeometry, MuonGeometryRecord> m_cscGeometryToken;
+  CSCSegAlgoRU *cscSegAlgo;
 
   const GEMRecHit *findMatchedHit(const float,  const GEMRecHitCollection::range );
   const GEMEtaPartition*  findEtaPartition(const GEMChamber*, const GlobalPoint&);

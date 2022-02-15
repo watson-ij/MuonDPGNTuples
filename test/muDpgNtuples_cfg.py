@@ -39,8 +39,9 @@ options.register('isMC',
 options.register('inputFolder',
                  #'/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/068/00000/',
                  #"/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/346/104/00000/",
-                 "/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/347/272/00000/",
+                 #"/eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/347/272/00000/",
                  #'/lustre/cms/store/user/gmilella/MCCosmics_0T_10M/CRAB3_MC_Cosmics_RECOCOSMICS_0T_10M/210309_112327/0000',
+                 'file:/pad/iawatson/GEM/2022-02-04-csc-seg-backprop/src/0711cbb5-6377-4d3f-98d6-5d59e865408d.root',
                  VarParsing.VarParsing.multiplicity.singleton,
                  VarParsing.VarParsing.varType.string,
                  "EOS folder with input files")
@@ -88,8 +89,7 @@ elif "/xrd/" in options.inputFolder:
     process.source.fileNames = ["root://cms-xrdr.sdfarm.kr//" +f for f in files.split()]
 
 else:
-    files = subprocess.check_output(['ls', options.inputFolder])
-    process.source.fileNames = ["file://" + options.inputFolder + "/" + f for f in files.split()]
+    process.source.fileNames = ['file:/pad/iawatson/GEM/2022-02-04-csc-seg-backprop/src/0711cbb5-6377-4d3f-98d6-5d59e865408d.root']
 
 if options.secondaryInputFolder != "" :
     files = subprocess.check_output(["ls", options.secondaryInputFolder])
@@ -116,6 +116,6 @@ process.load('MuDPGAnalysis.MuonDPGNtuples.muNtupleProducer_cfi')
 process.p = cms.Path(#process.muonDTDigis + 
                       process.muNtupleProducer)
 
-process.muNtupleProducer.isMC = cms.bool(options.isMC)
+process.muNtupleProducer.isMC = cms.bool(False)
 
 process.p = cms.Path(process.muNtupleProducer)

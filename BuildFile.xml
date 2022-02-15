@@ -20,6 +20,7 @@
 <use name="TrackingTools/TransientTrack"/>
 <use name="TrackingTools/Records"/>
 <use name="RecoMuon/TrackingTools"/>
+<use name="RecoLocalMuon/CSCSegment"/>
 
 <export>
    <lib name="1"/>
